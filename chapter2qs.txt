@@ -11,4 +11,17 @@ endtime = datetime.datetimenow()
 
 deltaT = endtime - starttime
 
-Q4:
+Q4: O(n^2) is better than O(2^n); after successive iterations, O(2^n) results in a lot more function calls which may result in a longer run time that desired
+
+Q5: Functions that act under O(n^2) are directly proportional to the square of the input data size. This is commonly the case with functions that have many nested operations and nested lists.
+
+Q7: This would be an example of a logarthmic complexity. Unlike functions that would be O(n), O(n^2), or O(2^n), this function is decreasing in the number of operations it does as the function runs.
+
+Q8: Algorithm A would be in O(n) while algorithm B would be in O(n^2)
+
+Q9: When using +, as opposed to append, two operations are being done. The first is that the list that is being added to is being checked to see where items are located in the list. The second thing is that another list is being made as a copy of the first list with the additional item. With append, it is O(n) as opposed to O(n^2) as the original list only needs to have an additional item added to it and nothing else.
+
+Q10: 
+def listitem(l,n):
+	return l[n]
+This would have complexity of O(1). My assumptions are that the user knows how long the list is that they are using, and the number, n, is going to be a non-negative real number that is within the range of the list.
