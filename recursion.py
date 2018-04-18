@@ -57,6 +57,7 @@ def bear_share(n):
 				return True
 			except RecursionError:
 				return bear_share(n-a)
+	return False
 print(bear_share(250))
 print(bear_share(52))
 print(bear_share(43))
