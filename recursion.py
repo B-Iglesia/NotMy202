@@ -47,23 +47,16 @@ def bear_share(n):
 	if n==42:
 		return True
 	else:
-		if n%2==0:
-			if bear_share(n//2)==False:
-				if bear_share(n-42)==False:
-					return bear_share(n-(int(str(n)[-1])*int(str(n)[-2])))
-				return bear_share(n-42)
+		if n%2==0 and not n%5==0 and not n%4==0 and not n%3==0:
 			return bear_share(n//2)
 		if n%5==0:
-			if bear_share(n-42)==False:
-				return bear_share(n//2)
 			return bear_share(n-42)
 		if n%4==0 or n%3==0:
-			if bear_share((int(str(n)[-1])*int(str(n)[-2])))==0:
-				if bear_share(n-42)==False:
-					return bear_share(n//2)
-				return bear_share(n-42)
-			return bear_share(n-(int(str(n)[-1])*int(str(n)[-2])))
-		return False
+			try:
+				a = l2d(n)
+				return True
+			except RecursionError:
+				return bear_share(n-a)
 print(bear_share(250))
 print(bear_share(52))
 print(bear_share(43))
