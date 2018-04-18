@@ -1,0 +1,14 @@
+Q1: A python list is like a post box in that there are a finite number of post boxes and each box is analogous to an index of a list which references a specific item.
+Q2: With a post office, one would would have to specifically go to each box to figure out which box held what if one did not know which box they were actually searching for. Instead, the items of a list are always easily accessible and can be accessed at at the same speed and frequency no matter the size of the list (generally)
+Q3: import the time module and find the difference between a start time and and end time between initializing and ending a function:
+
+import time
+import datetime
+
+starttime = datetime.datetimenow()
+#some function call here#
+endtime = datetime.datetimenow()
+
+deltaT = endtime - starttime
+
+Q4:
